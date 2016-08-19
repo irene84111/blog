@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>2.0 x Double Y &amp; C | Double Y &amp; C</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="有些人看過我的個人網頁 1.0，那是一個既沒有框架也沒有模板的悲劇。事隔一年，終於升級了！本文就要來談談打了一年新手怪的心路歷程，以及 Gulp 和 Hexo 的使用心得。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2.0 x Double Y & C">
+<meta property="og:url" content="http://irene84111.github.io/blog/2016/become-a-blogger/index.html">
+<meta property="og:site_name" content="Double Y & C">
+<meta property="og:description" content="有些人看過我的個人網頁 1.0，那是一個既沒有框架也沒有模板的悲劇。事隔一年，終於升級了！本文就要來談談打了一年新手怪的心路歷程，以及 Gulp 和 Hexo 的使用心得。">
+<meta property="og:image" content="http://irene84111.github.io/blog/2016/become-a-blogger/cover.jpg">
+<meta property="og:updated_time" content="2016-08-19T04:53:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2.0 x Double Y & C">
+<meta name="twitter:description" content="有些人看過我的個人網頁 1.0，那是一個既沒有框架也沒有模板的悲劇。事隔一年，終於升級了！本文就要來談談打了一年新手怪的心路歷程，以及 Gulp 和 Hexo 的使用心得。">
+<meta name="twitter:image" content="http://irene84111.github.io/blog/2016/become-a-blogger/cover.jpg">
+    
+
+    
+
+    
+        <link rel="icon" href="/blog/css/images/favicon.ico# path to favicon" />
+    
+
+    <link rel="stylesheet" href="/blog/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/blog/vendor/open-sans/styles.css">
+    <link rel="stylesheet" href="/blog/vendor/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/blog/css/style.css">
+
+    <script src="/blog/vendor/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/blog/vendor/fancybox/jquery.fancybox.css">
+    
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/blog/" id="logo">
+                
+                <span class="site-title">Double Y &amp; C</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/blog/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/blog/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/blog/tags">Tags</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/blog/css/images/avatar.jpg" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/blog/',
+        CONTENT_URL: '/blog/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/blog/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/blog/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/blog/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/blog/tags">Tags</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/blog/css/images/avatar.jpg" />
+            <h2 id="name">Ya Yin Chang</h2>
+            <h3 id="title">Graphic &amp; Web Designer</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>Taipei, Taiwan</span>
+            <a id="follow" target="_blank" href="http://irene84111.github.io/">ABOUT</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                1
+                <span>post</span>
+            </div>
+            <div class="article-info-block">
+                3
+                <span>tags</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="/blog/irene84111@gmail.com" target="_blank" title="envelope" >
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="http://github.com/irene84111" target="_blank" title="github-square" >
+                            <i class="fa fa-github-square"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.facebook.com/irene.chang.735" target="_blank" title="facebook-official" >
+                            <i class="fa fa-facebook-official"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-become-a-blogger" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<img src="cover.jpg" class="article-banner" />
+	
+
+
+
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            2.0 x Double Y &amp; C
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/2016/become-a-blogger/">
+            <time datetime="2016-03-17T02:57:35.000Z" itemprop="datePublished">2016-03-17</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/blog/categories/Front-end/">Front-end</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/blog/tags/Gulp/">Gulp</a>, <a class="tag-link" href="/blog/tags/Hexo/">Hexo</a>, <a class="tag-link" href="/blog/tags/Self-Reflection/">Self-Reflection</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>有些人看過我的個人網頁 1.0，那是一個既沒有框架也沒有模板的悲劇。事隔一年，終於升級了！本文就要來談談打了一年新手怪的心路歷程，以及 Gulp 和 Hexo 的使用心得。</p>
+<a id="more"></a>
+<hr>
+<h3 id="先來談談-1-0-到-2-0-的過程"><a href="#先來談談-1-0-到-2-0-的過程" class="headerlink" title="先來談談 1.0 到 2.0 的過程"></a>先來談談 1.0 到 2.0 的過程</h3><img src="/blog/2016/become-a-blogger/gulp.jpg" alt="Gulp" title="Gulp">
+<p><a href="http://gulpjs.com/" title="gulpjs.com" target="_blank" rel="external">Gulp</a> 是一個很好用的 “任務自動化管理工具（Build System）”，推薦 <em>Joel Longie</em> 在 YouTube 上的 <a href="https://www.youtube.com/watch?v=LmdT2zhFmn4&amp;list=PLv1YUP7gO_viROuRcGsDCNM-FUVgMYb_G" target="_blank" rel="external">Gulp 教學</a> 很適合新手。不過我一直到今年初終於下定決心要衝等的時候，我才學會兩件事：</p>
+<ol>
+<li>想學和真的動手有很大的距離。</li>
+<li>所有學習都從模（ㄈㄨˋ）仿（ㄓˋ）開始。</li>
+</ol>
+<p>Gulp 功能強大，<del>大至把人送上火星</del>，小至完成我的三個小願望：</p>
+<ol>
+<li><strong>編譯 Jade 檔</strong>，擺脫老是沒關緊的 HTML 標籤。</li>
+<li><strong>編譯 Sass 檔</strong>，沒辦法回頭了！</li>
+<li><strong>自動刷新頁面</strong>，我就是懶呀。</li>
+</ol>
+<p>我只要編寫 <em>src</em> 資料夾裡的原檔（需要經過編譯的檔案），Gulp 便會把編譯好的檔案丟到 <em>dist</em> 資料夾。完整的專案可以參考我的 <a href="https://github.com/irene84111/portfolio" target="_blank" rel="external">GitHub</a>，而我的 <a href="http://irene84111.github.io">Github Pages</a> 就是上傳已經整理好、可以隨時發布的 <em>dist</em> 資料夾。</p>
+<p>實際的使用方法可以多爬文或參考完整的專案，<a href="http://www.oxxostudio.tw/articles/201503/gulp-install-webserver.html" target="_blank" rel="external">OXXO.STUDIO 的教學文</a> 推薦給大家。</p>
+<p>懂得運用 Gulp 對我在學習前端上是一個重要的進程，這段期間包括弄懂框架（Framework）、熟悉預處理器（Preprocessor）、了解套件管理（Package Control）等等。最近在 GitHub 上種草的時候，便有感持續進步所帶給我的喜悅。說不定我種的不是含羞草，是大麻。</p>
+<p>回到 <a href="http://irene84111.github.io">個人網頁 2.0</a>，總結兩個心得：</p>
+<ol>
+<li>我要和 <a href="http://foundation.zurb.com/" target="_blank" rel="external">Foundation</a> 分手！</li>
+<li>第一次用手機瀏覽後才知道 RWD 真的很難（哭）。</li>
+</ol>
+<p>目前還在尋找加入 Contact Form 的可能性，也會以更好的設計為目標持續努力。最近收集了不少優秀的 Protfolio Pages，相較之下，自己的作品還很陽春呀（掩面）。</p>
+<p>但最重要的還是，透過這個過程來 <strong>認識並整理自己</strong>。</p>
+<hr>
+<h3 id="再來說說-Double-Y-amp-C-是什麼"><a href="#再來說說-Double-Y-amp-C-是什麼" class="headerlink" title="再來說說 Double Y &amp; C 是什麼"></a>再來說說 Double Y &amp; C 是什麼</h3><p>就是 “YYC” 呀！Ya Yin Chang 的縮寫。由於太像某 Y*K 拉鏈大廠，只好避掉俗氣來個自我感覺良好。</p>
+<img src="/blog/2016/become-a-blogger/hexo.jpg" alt="Hexo" title="Hexo">
+<p>大推現在很夯的 <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>，這個容易上手的網誌框架讓手殘如我也可以第一次就輕鬆架設。在設定部署的時候，才發現原來可以透過 <code>gh-pages</code> 分支來新增各種分頁在自己的 GitHub Pages 下（<a href="https://help.github.com/articles/creating-project-pages-manually/" target="_blank" rel="external">官方教學文</a>）， 也可以參考我的 <a href="https://github.com/irene84111/blog/blob/master/_config.yml" target="_blank" rel="external">config.yml</a> 設定。</p>
+<p>「反正一開始有沒什麼流量，就寫吧！」</p>
+<p>受到 Caesar 大大的刺激之後，就先從每週至少一文開始吧！</p>
+<blockquote>
+<p>In the 21st Century, Everyone’s a writer.</p>
+</blockquote>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://irene84111.github.io/blog/blog/2016/become-a-blogger/" data-id="cis18zxkw0000a2hy91sabpnu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://irene84111.github.io/blog/blog/2016/become-a-blogger/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://irene84111.github.io/blog/blog/2016/become-a-blogger/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+</section>
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">recent</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/2016/become-a-blogger/" class="thumbnail">
+    
+    
+        <span style="background-image:url(2016/become-a-blogger/cover.jpg)" alt="2.0 x Double Y &amp; C" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Front-end/">Front-end</a></p>
+                            <p class="item-title"><a href="/blog/2016/become-a-blogger/" class="title">2.0 x Double Y &amp; C</a></p>
+                            <p class="item-date"><time datetime="2016-03-17T02:57:35.000Z" itemprop="datePublished">2016-03-17</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Front-end/">Front-end</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Gulp/">Gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Self-Reflection/">Self-Reflection</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/blog/tags/Gulp/" style="font-size: 10px;">Gulp</a> <a href="/blog/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/blog/tags/Self-Reflection/" style="font-size: 10px;">Self-Reflection</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2016 Ya Yin Chang<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://irene84111.github.io/blog/blog/2016/become-a-blogger/';
+        
+        this.page.identifier = 'become-a-blogger';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'irene84111' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+    
+        <script src="/blog/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/blog/js/main.js"></script>
+
+    </div>
+</body>
+</html>
